@@ -1,0 +1,130 @@
+@font-face{
+    font-family: 'FangZheng';
+    src : url('font.ttf');
+}
+@font-face{
+    font-family: 'Hans';
+    src : url('font-eng.ttf');
+}
+:root{
+    scrollbar-color: #ededed rgba(0,0,0,.2) !important; /*For FireFox*/
+    scrollbar-width: 5px !important;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hans','FangZheng';
+}
+
+
+.container{
+    position: relative;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.annoucement{
+    color: black;
+    text-align: center;
+}
+
+
+.post{
+    color: black;
+    text-align: center;
+    height: 0;
+    width: 30rem;
+    overflow: hidden;
+    transition: all .7s ease-in-out;
+    padding: 1rem;
+}
+
+.post-onshow{
+    height: 20rem;
+    background-color: #EEEEEE;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-track-color: transparent;
+    -ms-scrollbar-track-color: transparent;
+}
+
+.post-line{
+    width: 0rem;
+    height: 3px;
+    background-color: #303030;
+    transition: all .7s ease-in-out;
+}
+
+.post-line-onshow{
+    width: 32rem;
+}
+
+.footer{
+    position: fixed;;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+}
+
+.underline{
+    border-bottom: 1px dotted #000000;
+    color:#000000;
+    text-decoration:none;
+}
+
+.second{
+    color: #010101;
+}
+
+.bottomLeft{
+    width: 30px; 
+    height: 30px;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 10px;
+}
+
+.svg{
+    fill: #000000;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    background: #777
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    border-radius: 10px;
+    background: #ededed
+}
+
