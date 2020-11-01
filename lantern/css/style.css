@@ -1,0 +1,213 @@
+
+:root{
+    scrollbar-color: #ededed rgba(0,0,0,.2) !important; /*For FireFox*/
+    scrollbar-width: 5px !important;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hans','FangZheng';
+}
+
+
+.container{
+    position: relative;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.forwechat{
+    color: white;
+    text-align: center;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.annoucement{
+    color: black;
+    margin-top: 1rem;
+    text-align: center;
+    overflow: hidden;
+    max-height: 100vh;
+    transition: all .7s ease-in-out;
+}
+
+.hide{
+    max-height: 0rem;
+}
+
+.post{
+    color: black;
+    text-align: center;
+    height: 0;
+    width: 30rem;
+    overflow: hidden;
+    transition: all .7s ease-in-out;
+    padding: 1rem;
+}
+
+.post-onshow{
+    height: 20rem;
+    background-color: #EEEEEE;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-track-color: transparent;
+    -ms-scrollbar-track-color: transparent;
+}
+
+.post-line{
+    width: 0rem;
+    height: 3px;
+    background-color: #303030;
+    transition: all .7s ease-in-out;
+}
+
+.post-line-onshow{
+    width: 32rem;
+}
+
+.footer{
+    position: fixed;;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+}
+
+.underline{
+    border-bottom: 1px dotted #000000;
+    color:#000000;
+    text-decoration:none;
+}
+
+.second{
+    color: #696868;
+}
+
+.bottomLeft{
+    width: 30px; 
+    height: 30px;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 10px;
+}
+
+.svg{
+    fill: #000000;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    background: #777
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    border-radius: 10px;
+    background: #ededed
+}
+
+.mainIcon{
+    width: 16rem;
+    height: 16rem;
+    border-radius: 10px;
+    background-image: url(lantern.jpg);
+    background-position: center center;
+    background-attachment: normal;
+    background-repeat: no-repeat;
+    background-size: 16rem;
+
+}
+
+.button{
+    position: relative;
+    will-change: transform;
+    letter-spacing: .025em;
+    font-size: .875rem;
+    color: #000000;
+    border-color: #727272;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    padding: .625rem 1.25rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: all .15s ease;
+}
+button:focus {
+    outline: none;
+}
+.button:hover{
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    background-color: #383838;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+.spinner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  /* SPINNING CIRCLE */
+  
+  .circle-border {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(153, 153, 153, 0.1) 33%, rgb(0, 0, 0) 100%);
+    animation: spin .8s linear 0s infinite;
+  }
+  
+  .circle-core {
+    width: 100%;
+    height: 100%;
+    /*background-color: #37474f;*/
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
